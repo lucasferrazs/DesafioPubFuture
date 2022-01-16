@@ -1,0 +1,66 @@
+/*Cadastrar Receita*/
+insert into receita values(null,1500.00,now(),now(),"salario inicial", "salario",2);
+
+/*Editar receita*/
+
+update receita set valor = 3000 
+where idreceita = 1;
+
+/*remover receita*/
+delete from receita where idreceita = 1;
+
+
+/*filtra receita*/
+
+select * from receita where dataRecebimento >= '2021-01-15' and dataRecebimentoEsperado <= '2021-01-17';
+
+select * from receita where tipoReceita = 'salario';
+
+select * from receita;
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+/*Cadastrar Despesa*/
+insert into despesa values(null,300.00,now(),now(), "alimentacao",1);
+
+/*Editar despesa*/
+
+update despesa set valor = 400.50 
+where despesa = 1;
+
+/*remover despesa*/
+delete from despesa where iddespesa = 1;
+
+
+/*filtra receita*/
+
+select * from despesa where dataPagamento >= '2021-01-15' and dataPagamentoEsperado <= '2021-01-17';
+
+select * from despesa where tipoDespesa= 'alimentacao';
+
+select * from despesa;
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+/*Cadastrar conta*/
+insert into conta values(null,'contaCorrente',0);
+
+/*Editar conta*/
+
+update conta set tipoConta = 'carteira' 
+where idconta = 1;
+
+/*remover conta*/
+delete from conta where idconta = 1;
+
+
+/*trasferir entre contas*/
+						/*id remetente , id destinatario*/ 
+insert into transferencia values(200,1,2);
+
+/*listar saldo total*/
+
+select * from conta;
+
